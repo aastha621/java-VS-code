@@ -1,11 +1,14 @@
 package Graphs;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
 
 public class traversals {
 
-    public static class Edge{
+    public static class Edge
+    {
         int v;
         int w;
 
@@ -73,6 +76,34 @@ public class traversals {
 
     }
 
+    public static void BFS(int src, boolean[] vis){
+        
+        Queue<Integer> qu= new LinkedList<Integer>();
+
+        qu.add(src);
+        vis[src]=true;
+
+        while(!qu.isEmpty())
+        {
+            int e=qu.poll();
+            System.out.print(e+" ");
+
+            ArrayList<Edge> adj= graph.get(e);
+
+            for(Edge ed:adj){
+                int nbr=ed.v;
+
+                if(!vis[nbr])
+                {   vis[nbr]=true;
+                    qu.add(nbr);
+                }
+            }
+
+        }
+
+
+    }
+
 
     public static void printAllPaths(int src, int des, boolean[] vis, String psf) //time complexity?
     {
@@ -127,11 +158,12 @@ public class traversals {
 
         boolean[] visited= new boolean[6];
 
-        System.out.println(hasPath(graph, 0, 2, visited));
+        // System.out.println(hasPath(graph, 0, 2, visited));
 
-        DFS(0,visited);
+        // DFS(0,visited);
+        BFS(2, visited);
 
-        printAllPaths(0, 5, visited, 0+"");
+        // printAllPaths(0, 5, visited, 0+"");
 
 
 
