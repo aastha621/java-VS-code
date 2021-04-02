@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch traversals",
+            "request": "launch",
+            "mainClass": "Graphs.traversals",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch Interleave",
             "request": "launch",
             "mainClass": "Interleave",
