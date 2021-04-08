@@ -39,7 +39,8 @@ public class traversals {
         ArrayList<Edge> adjEdges= gr.get(src);
         visited[src]=true;
 
-        for(Edge edge: adjEdges){
+        for(Edge edge: adjEdges)
+        {
             int nbr=edge.v;
 
             if(!visited[nbr]){
@@ -132,6 +133,7 @@ public class traversals {
 
 
     }
+    
 
    
 

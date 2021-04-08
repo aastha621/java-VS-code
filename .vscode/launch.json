@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch catalan",
+            "request": "launch",
+            "mainClass": "catalan",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch RatMaze",
+            "request": "launch",
+            "mainClass": "RatMaze",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch traversals",
             "request": "launch",
             "mainClass": "Graphs.traversals",
