@@ -12,7 +12,8 @@ public class MST
         int key;
 
         @Override
-        public int compareTo(graphNode o) {
+        public int compareTo(graphNode o) 
+        {
             
             return this.key-o.key;
         }
@@ -26,7 +27,7 @@ public class MST
 
     }
     
-    public static void PrimsDFS(ArrayList<ArrayList<Edge>> graph)
+    public static void PrimsBFS(ArrayList<ArrayList<Edge>> graph)
     {
         int v=graph.size();
 
@@ -36,11 +37,13 @@ public class MST
 
         //adding src node to pq
         pq.add(new graphNode(0,-1,0));
-        System.out.println("The Minimum spanning tree for this graph is");
 
+        //heading
+        System.out.println("The Minimum spanning tree for this graph is");
         System.out.println("EDGE" +"    "+ "WEIGHT" );
 
-        while(!pq.isEmpty()){
+        while(!pq.isEmpty())
+        {
             graphNode node= pq.poll();
 
             int vertex=node.ver;
@@ -55,7 +58,7 @@ public class MST
             if(node.parent!=-1)
             System.out.println(node.parent+ " -> " + vertex +"    "+ node.key );
 
-
+            //adding all unvisited the adjacent nodes in the pq, which will get sorted by weight
             for(Edge edge: nbrs)
             {
                 int nbr=edge.v;
@@ -63,7 +66,6 @@ public class MST
 
                 if(!visited[nbr])
                 {
-                    
                     pq.add(new graphNode(nbr,node.ver, wt));
                 }
             }
@@ -111,7 +113,7 @@ public class MST
         // traversals.addEdge(graph, 5, 3, 1);
 
 
-        PrimsDFS(graph);
+        PrimsBFS(graph);
         
     }
 
