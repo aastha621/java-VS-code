@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MST",
+            "request": "launch",
+            "mainClass": "Graphs.MST",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch sorting",
+            "request": "launch",
+            "mainClass": "sorting",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch catalan",
             "request": "launch",
             "mainClass": "catalan",
