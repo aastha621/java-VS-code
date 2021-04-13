@@ -1,16 +1,17 @@
 package Graphs;
 import java.util.*;
-
 import Graphs.traversals.Edge;
 
 public class MST 
 {
-    public static class EdgePair implements Comparable<EdgePair>{
+    public static class EdgePair implements Comparable<EdgePair>
+    {
         int u;
         int v;
         int w;
 
-        EdgePair(int a, int b, int c){
+        EdgePair(int a, int b, int c)
+        {
             u=a;
             v=b;
             w=c;
@@ -35,7 +36,6 @@ public class MST
         @Override
         public int compareTo(graphNode o) 
         {
-            
             return this.key-o.key;
         }
 
@@ -45,6 +45,31 @@ public class MST
             parent=p;
             key=k;
         }
+
+    }
+
+    public static ArrayList<EdgePair> giveEdgeList(ArrayList<ArrayList<Edge>> graph){
+
+        ArrayList<EdgePair> edgeList = new ArrayList<>();
+        
+        for(int i=0; i<graph.size(); i++)
+        {
+            ArrayList<Edge> adj= graph.get(i);
+
+            for(Edge e: adj)
+            {
+                int nbr=e.v;
+                int wt=e.w;
+
+                if(i<=nbr){
+                    edgeList.add(new EdgePair(i, nbr, wt));
+                }
+            }
+
+        }
+
+        return edgeList;
+
 
     }
     
@@ -91,21 +116,18 @@ public class MST
                 }
             }
 
-
-
-
         }
 
 
     }
 
-    public static int findParent(int[] parent, int i){
+    public static int findParent(int[] parent, int i)
+    {
         if(parent[i]==i)
         return i;
 
         return findParent(parent, parent[i]);
     }
-
 
 
 
@@ -120,28 +142,8 @@ public class MST
         }
 
         //making the edge list
-
-        ArrayList<EdgePair> edgeList= new ArrayList<>();
-        
-        for(int i=0; i<v; i++)
-        {
-            ArrayList<Edge> adj= graph.get(i);
-
-            for(Edge e: adj)
-            {
-                int nbr=e.v;
-                int wt=e.w;
-
-                if(i<=nbr){
-                    edgeList.add(new EdgePair(i, nbr, wt));
-                }
-            }
-
-        }
-
-        
-
-
+        ArrayList<EdgePair> edgeList = giveEdgeList(graph);
+    
         for(EdgePair ep:edgeList)
         {
             int p1= findParent(parent, ep.u);
@@ -154,20 +156,17 @@ public class MST
                 parent[ep.u]=ep.v;
             }
 
-
-
         }
-
 
         return false;
     }
 
 
-    public static void kruskalMST(ArrayList<ArrayList<Edge>> graph){
+    public static void kruskalMST(ArrayList<ArrayList<Edge>> graph)
+    {
 
         int v= graph.size();
         
-
         int[] parent= new int[v];
 
         for(int i=0; i<v; i++)
@@ -175,36 +174,18 @@ public class MST
             parent[i]=i;
         }
 
-        //making the edge list
-
-        ArrayList<EdgePair> edgeList= new ArrayList<>();
-        
-        for(int i=0; i<v; i++)
-        {
-            ArrayList<Edge> adj= graph.get(i);
-
-            for(Edge e: adj)
-            {
-                int nbr=e.v;
-                int wt=e.w;
-
-                if(i<=nbr){
-                    edgeList.add(new EdgePair(i, nbr, wt));
-                }
-            }
-
-        }
-
-        Collections.sort(edgeList);
+       //making the edge list
+       ArrayList<EdgePair> edgeList = giveEdgeList(graph);
+       Collections.sort(edgeList);
 
         int count=0;
         int i=0;
 
         ArrayList<EdgePair> mst= new ArrayList<>();
 
-        while(count<3)
+        while(count<v-1)
         {
-            EdgePair ep=edgeList.get(i);
+            EdgePair ep=edgeList.get(i++);
 
             int p1= findParent(parent, ep.u);
             int p2= findParent(parent, ep.v);
@@ -214,29 +195,21 @@ public class MST
                 mst.add(ep);
                 count++;
                 parent[ep.u]=ep.v;
-                
-
-                
             }
 
-            i++;
+            // i++;
 
 
         }
 
         System.out.println("The Minimum spanning tree for this graph using Kruskal is");
-        System.out.println("EDGE" +"    "+ "WEIGHT" );
+        System.out.println("EDGE" +"    "+ "WEIGHT");
 
 
-        for(EdgePair ep: mst){
+        for(EdgePair ep: mst)
+        {
             System.out.println(ep.u+" -> "+ep.v+"   "+ ep.w);
         }
-
-
-
-
-
-
 
     }
 
@@ -254,8 +227,6 @@ public class MST
         {
             graph.add(i,new ArrayList<Edge>());
         }
-
-
         s.close();
 
         // traversals.addEdge(graph, 0, 1, 4);
