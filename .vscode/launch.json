@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CodejamQ1",
+            "request": "launch",
+            "mainClass": "CodejamQ1",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch coinChange",
+            "request": "launch",
+            "mainClass": "coinChange",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch MST",
             "request": "launch",
             "mainClass": "Graphs.MST",

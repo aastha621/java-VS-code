@@ -2,6 +2,8 @@
 
 import java.util.*;
 
+
+
 class Main {
 
     public static void main(String[] args) {
@@ -10,6 +12,8 @@ class Main {
 
         hm.put(1, 2);
         System.out.println(hm.get(1));
+
+        
     }
     
 }
