@@ -6,7 +6,8 @@
 	],
 	"settings": {
 		"java.project.sourcePaths": [
-			"Graphs"
+			"Graphs",
+			""
 		]
 	}
 }

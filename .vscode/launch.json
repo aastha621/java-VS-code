@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LexoNums",
+            "request": "launch",
+            "mainClass": "LexoNums",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch CodejamQ1",
             "request": "launch",
             "mainClass": "CodejamQ1",
