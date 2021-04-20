@@ -16,7 +16,7 @@ public class LexoNums{
         public static void main(String[] args) {
     
             int n=13;
-            for(int i=1; i<=n; i++){
+            for(int i=1; i<=9; i++){
                lexoOrder(i, n);
             }
         }
