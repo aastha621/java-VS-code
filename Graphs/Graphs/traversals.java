@@ -171,6 +171,7 @@ public class traversals {
 
                 if(dist[nbr]>dist[src]+wt && dist[src]!=Integer.MAX_VALUE) 
                 //why do we check for max value here
+                
                 dist[nbr]=dist[src]+wt;
 
             }
