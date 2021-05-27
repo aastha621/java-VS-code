@@ -26,7 +26,8 @@ public class MST
 
         
     }
-    //making a class that will store the certex value, parent and wt for each vertex
+
+    //making a class that will store the vertex value, parent and wt for each vertex
     public static class graphNode implements Comparable<graphNode>
     {
         int ver;
@@ -39,16 +40,18 @@ public class MST
             return this.key-o.key;
         }
 
-        graphNode(int v,int p,  int k)
+        graphNode(int v,int p, int k)
         {
             ver=v;
             parent=p;
-            key=k;
+            key=k; 
         }
 
     }
+    
 
-    public static ArrayList<EdgePair> giveEdgeList(ArrayList<ArrayList<Edge>> graph){
+    public static ArrayList<EdgePair> giveEdgeList(ArrayList<ArrayList<Edge>> graph)
+    {
 
         ArrayList<EdgePair> edgeList = new ArrayList<>();
         
@@ -58,7 +61,7 @@ public class MST
 
             for(Edge e: adj)
             {
-                int nbr=e.v;
+                int nbr=e.v; 
                 int wt=e.w;
 
                 if(i<=nbr){
