@@ -10,9 +10,9 @@ public class TargetSumDP {
             for(int j=0; j<dp[0].length; j++)
             {
 
-                if(i==0&&j==0)dp[i][j]=true;
-                else if(i==0)dp[i][j]=false;
-                else if(j==0)dp[i][j]=true; 
+                if(i==0&&j==0) dp[i][j]=true;
+                else if(i==0) dp[i][j]=false;
+                else if(j==0) dp[i][j]=true; 
                 
                 else{
                      if(arr[i-1]>=j){
