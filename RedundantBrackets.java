@@ -22,6 +22,9 @@ public class RedundantBrackets {
                         flag=false;
                     }
 
+                    st.pop();
+                    
+
                     if(flag==true)return true;
 
                 }
@@ -29,6 +32,7 @@ public class RedundantBrackets {
                 
 
             }
+
             else st.push(c);
 
         }
@@ -37,7 +41,7 @@ public class RedundantBrackets {
         return false;
     }
     public static void main(String args[]) {
-        System.out.println(redundant("(a+(b+g)+c)"));
+        System.out.println(redundant("((a)+(b+g)+c)"));
     }
     
 }

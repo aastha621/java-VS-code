@@ -66,5 +66,24 @@ public class preSuc {
 
     }
 
+    int ans=Integer.MIN_VALUE;
+
+    public static int maxSubtreeSum(TreeNode root, int sum){
+
+        if(root==null)return 0;
+
+
+        int currSum=root.val+maxSubtreeSum(root.left, sum)+maxSubtreeSum(root.right, sum);
+
+        sum=Math.max(sum, currSum);
+
+
+        return sum;
+
+
+
+
+    }
+
     
 }
