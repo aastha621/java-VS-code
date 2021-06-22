@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LCS",
+            "request": "launch",
+            "mainClass": "DP.LCS",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch permute",
+            "request": "launch",
+            "mainClass": "Array.permute",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch subsequences",
+            "request": "launch",
+            "mainClass": "Strings.subsequences",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch KMP",
             "request": "launch",
             "mainClass": "Strings.KMP",
