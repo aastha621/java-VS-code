@@ -17,9 +17,12 @@ public class TargetSumDP {
                 else if(j==0) dp[i][j]=true; 
                 
                 else{
-                     if(arr[i-1]>=j){
+                     if(arr[i-1]>=j)
+                     {
+                         //check if it is possible to make sum either by including or not including element
                         dp[i][j]= dp[i-1][j] || dp[i-1][j-arr[i-1]];
                      }
+                     
                     else
                     dp[i][j]=dp[i-1][j];
 

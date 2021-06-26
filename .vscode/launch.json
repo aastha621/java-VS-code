@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch chords",
+            "request": "launch",
+            "mainClass": "DP.chords",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch LIS",
+            "request": "launch",
+            "mainClass": "DP.LIS",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch LCS",
             "request": "launch",
             "mainClass": "DP.LCS",

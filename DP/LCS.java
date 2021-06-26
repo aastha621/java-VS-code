@@ -7,9 +7,7 @@ public class LCS {
         if(m==0 || n==0){
             return 0;
         }
-
-
-
+        
         if(x.charAt(n-1)==y.charAt(m-1))
         return 1+LCS_recursive(x, y, n-1, m-1);
 
