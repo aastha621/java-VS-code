@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch sum",
+            "request": "launch",
+            "mainClass": "sum",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
+            "name": "Launch maxRodSeg",
+            "request": "launch",
+            "mainClass": "DP.maxRodSeg",
+            "projectName": "Java Codes_1ebcd9c7"
+        },
+        {
+            "type": "java",
             "name": "Launch chords",
             "request": "launch",
             "mainClass": "DP.chords",

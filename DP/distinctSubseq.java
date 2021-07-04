@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class distinctSubseq {
 
+    //returns the number of distinct subsequences of a string with repeated characters
+
     public static int countDistinctSubseq(String arr){
         int n=arr.length();
 
