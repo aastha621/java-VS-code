@@ -1,6 +1,10 @@
-package Graphs;
-import java.util.*;
-import Graphs.traversals.Edge;
+package Graphs.Graphs;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.PriorityQueue;
+import java.util.Scanner;
+
+import Graphs.Graphs.traversals.Edge;
 
 public class MST 
 {
