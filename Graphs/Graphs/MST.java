@@ -1,4 +1,5 @@
 package Graphs.Graphs;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.PriorityQueue;
@@ -99,19 +100,19 @@ public class MST
         {
             graphNode node= pq.poll();
 
-            int vertex=node.ver;
+            int u=node.ver;
 
-            if(visited[vertex])
+            if(visited[u])
             continue;
 
-            visited[vertex]=true;
-
-            ArrayList<Edge> nbrs= graph.get(vertex);
+            visited[u]=true;
 
             if(node.parent!=-1)
-            System.out.println(node.parent+ " -> " + vertex +"    "+ node.key );
+            System.out.println(node.parent+ " -> " + u +"    "+ node.key );
+            
+            ArrayList<Edge> nbrs= graph.get(u);
 
-            //adding all unvisited the adjacent nodes in the pq, which will get sorted by weight
+            //adding all unvisited adjacent nodes in the pq, which will get sorted by weight
             for(Edge edge: nbrs)
             {
                 int nbr=edge.v;
@@ -119,7 +120,7 @@ public class MST
 
                 if(!visited[nbr])
                 {
-                    pq.add(new graphNode(nbr,node.ver, wt));
+                    pq.add(new graphNode(nbr,u, wt));
                 }
             }
 
@@ -183,6 +184,7 @@ public class MST
 
        //making the edge list
        ArrayList<EdgePair> edgeList = giveEdgeList(graph);
+       
        Collections.sort(edgeList);
 
         int count=0;

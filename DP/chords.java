@@ -27,12 +27,7 @@ public class chords {
                 right--;
             }
         }
-
-
-
-
-
-
+        
         return dp[chords];
 
     }

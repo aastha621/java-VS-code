@@ -51,9 +51,8 @@ public class palindromicPartition
                
             }
             
-            
-            
             dp[i]=min+1;
+            
             }
             
           

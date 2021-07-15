@@ -12,7 +12,8 @@ public class traversals {
         int v;
         int w;
 
-        Edge(int a, int b){
+        Edge(int a, int b)
+        {
             v=a;
             w=b;
         }
@@ -20,21 +21,24 @@ public class traversals {
 
     } 
     
-    //A graph is collection of connected edges
-    // static ArrayList<Edge>[] graph= new ArrayList<>[8];
+    // A graph is collection of connected edges
+    // static ArrayList<Edge>[] graph= new ArrayList<>[8]; 
 
-    public static ArrayList<ArrayList<Edge>> graph= new ArrayList<>();
+    public static ArrayList<ArrayList<Edge>> graph= new ArrayList<>(); //
 
 
     public static void addEdge(ArrayList<ArrayList<Edge>> graph, int u, int v, int w) 
     {
-        graph.get(u).add( new Edge(v, w));
-        graph.get(v).add( new Edge(u, w));
+        graph.get(u).add(new Edge(v, w));
+        graph.get(v).add(new Edge(u, w));
     }
 
+
+    //using dfs
     public static boolean hasPath(ArrayList<ArrayList<Edge>> gr, int src, int des, boolean[] visited)
     {
-        if(src==des)return true;
+        if(src==des)
+        return true;
 
         ArrayList<Edge> adjEdges= gr.get(src);
         visited[src]=true;
@@ -46,7 +50,7 @@ public class traversals {
             if(!visited[nbr]){
                 boolean nbrPath=hasPath(gr, nbr, des, visited);
 
-                if(nbrPath)return true;
+                if(nbrPath) return true;
             }
 
         }
@@ -79,11 +83,13 @@ public class traversals {
 
     }
 
-    public static void BFS(int src, boolean[] vis){
+    public static void BFS(int src, boolean[] vis)
+    {
         
         Queue<Integer> qu= new LinkedList<Integer>();
 
         qu.add(src);
+
         vis[src]=true;
 
         while(!qu.isEmpty())
@@ -93,7 +99,8 @@ public class traversals {
 
             ArrayList<Edge> adj= graph.get(e);
 
-            for(Edge ed:adj){
+            for(Edge ed:adj)
+            {
                 int nbr=ed.v;
 
                 if(!vis[nbr])
@@ -142,6 +149,7 @@ public class traversals {
 
         int v=graph.size();
         boolean[] vis= new boolean[v];
+
         int[] dist= new int[v];
 
         dist[0]=0;
@@ -169,7 +177,7 @@ public class traversals {
 
                 if(vis[nbr])continue;
 
-                if(dist[nbr]>dist[src]+wt && dist[src]!=Integer.MAX_VALUE) 
+                if(dist[nbr]> dist[src]+wt && dist[src]!=Integer.MAX_VALUE) 
                 //why do we check for max value here
                 
                 dist[nbr]=dist[src]+wt;
@@ -190,7 +198,8 @@ public class traversals {
 
    
 
-    private static int findMinimumDistanceNode(int[] dist, boolean[] vis) {
+    private static int findMinimumDistanceNode(int[] dist, boolean[] vis)
+    {
 
         int minIndex=-1;
 
@@ -238,11 +247,4 @@ public class traversals {
 
         dijsktra(graph);
     }
-
-    
-
-    
-
-
-    
 }

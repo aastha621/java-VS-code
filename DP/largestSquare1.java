@@ -20,8 +20,11 @@ public class largestSquare1 {
                 else if(j==0)
                 dp[i][j]=mat[i][j];
 
-                else if(mat[i][j]==1) {
+                else  {
+                    if(mat[i][j]==0)
+                    dp[i][j]=0;
 
+                    else if(mat[i][j]==1)
                     dp[i][j]=Math.min(dp[i-1][j-1], Math.min(dp[i-1][j], dp[i][j-1]))+1;
                 }
 

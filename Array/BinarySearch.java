@@ -10,7 +10,8 @@ public class BinarySearch {
         int max=0;
         int index=-1;
         
-        for(int i=0; i<n; i++){
+        for(int i=0; i<n; i++)
+        {
             int[] row=arr[i];
             
             cnt=count1(row); //using binary search, we will find the freq of 1 in each row
@@ -80,6 +81,67 @@ public class BinarySearch {
         return cnt;
         
         
+    }
+
+    //(Q) Find element that occurs only once in a sorted array where all other elements occur twice
+    
+
+    public static int search(int A[], int N)
+    {
+        if(N==1)
+        return A[0];
+        
+        
+        if(A[0]!=A[1]){
+            return A[0];
+        }
+        
+        
+        if(A[N-1] != A[N-2])
+        return A[N-1];
+        
+        
+        
+        int l=0;
+        int r=N-1;
+        
+        
+        while(l<=r){
+            
+            int mid=(l+r)/2;
+            
+            if(A[mid]!=A[mid-1] && A[mid]!=A[mid+1])
+            {
+                return A[mid];
+                
+            }
+            
+            else if(A[mid]==A[mid-1]){
+                int left_len= mid-l+1;
+                
+                if(left_len%2==0){
+                    l=mid+1;
+                }
+                
+                else{
+                    r=mid-2;
+                }
+            }
+            
+             else {
+                int right_len=r-mid+1;
+                
+                if(right_len%2==0){
+                    r=mid-1;
+                }
+                
+                else{
+                    l=mid+2;
+                }
+            }
+        }
+        
+        return -1;
     }
     
 

@@ -18,11 +18,7 @@ public class editDistance {
 
         if(j==b.length()) //if b becomes empty, to make equal all the remaining chars in a must be removed
         return a.length()-i;
-
-
-
-
-
+        
         if(a.charAt(i)==b.charAt(j))
         return editD_recursive(a, b, i+1, j+1);
 
@@ -52,6 +48,7 @@ public class editDistance {
         // Fill d[][] in bottom up manner
         for (int i = 0; i <= m; i++) {
             for (int j = 0; j <= n; j++) {
+                
                 // If first string is empty, only option is
                 // to insert all characters of second string
                 if (i == 0)

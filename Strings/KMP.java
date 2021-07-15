@@ -27,7 +27,7 @@ public class KMP {
         }
 
         return pi;
-    }//O(m)
+    } //O(m)
 
 
     public static int kmp(String p, String t){
@@ -35,8 +35,8 @@ public class KMP {
         int[] pi= buildPi(p); //O(m)
 
 
-        int i=0;//for test
-        int j=0;//for pi
+        int i=0; //for test
+        int j=0; //for pi
 
 
         while(i<t.length())
@@ -68,6 +68,7 @@ public class KMP {
         return -1;
 
     }
+    
     //total t.c= O(m+n)
 
         public static void main(String[] args) {
