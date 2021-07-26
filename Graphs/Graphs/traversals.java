@@ -138,9 +138,6 @@ public class traversals {
         }
 
         vis[src]=false;
-
-
-
     }
 
 

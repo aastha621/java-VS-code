@@ -19,6 +19,8 @@ public class median2array {
 
         while(lo<=hi){
 
+            //partition done
+
             int al=(lo+hi)/2;
             int bl= (t+1)/2-al;
 
@@ -29,7 +31,11 @@ public class median2array {
             bl=(bl==m)?Integer.MAX_VALUE: b[bl];
 
 
-            if(alm1<bl && blm1<al){
+            //check if partition is valid
+
+
+            if(alm1<bl && blm1<al)
+            {
 
                 if(t%2==0){
 
@@ -45,10 +51,12 @@ public class median2array {
             }
 
 
-            else if(alm1>bl){
+            else if(alm1>bl)//we should move the partition towards the left
+            {
                 hi=al-1;
             }
-            else if(blm1>al){
+            else if(blm1>al)//we should move the partition towards right
+            {
 
                 lo=al+1;
 

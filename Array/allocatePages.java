@@ -6,10 +6,14 @@ public class allocatePages {
     //Function to find minimum number of pages.
     public static int findPages(int[]a,int n,int m)
     {
-        // [20, 10, 30, 40] in any case of distribution, the min pages alloted to a student will be the max value of the array
+        // [20, 10, 30, 40] in any case of distribution, the min value of max pages alloted to a student will be the max value of the array
+
+        //range of answer-> (max value, sum)
 
         int max=0;
         int sum=0;
+
+        if(m>a.length)return -1;
 
         for(int x: a){
             max=Math.max(max, x);

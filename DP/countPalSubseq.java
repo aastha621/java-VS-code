@@ -22,7 +22,7 @@ public class countPalSubseq {
 
                 if(g==1) //substr of length 2
                 {
-                    dp[i][j]=(s.charAt(i)==s.charAt(j))? 3:2;
+                    dp[i][j]= (s.charAt(i)==s.charAt(j))? 3:2;
                 }
 
                 else{
