@@ -27,7 +27,8 @@ public class coinChange {
 
         for(int i=0; i<denom.length; i++){
 
-            for(int j=denom[i]; j<dp.length; j++){
+            for(int j=denom[i]; j<dp.length; j++)
+            {
                 dp[j]+=dp[j-denom[i]];
             }
         }
@@ -42,8 +43,8 @@ public class coinChange {
         //for permutation, we will see effect of all denominations on each cell
 
         for(int i=0; i<dp1.length; i++){
-            for(int j=0; j<denom.length; j++){
-
+            for(int j=0; j<denom.length; j++)
+            {
                 if(denom[j]<=i){
                     dp1[i]+=dp1[i-denom[j]];
                 }

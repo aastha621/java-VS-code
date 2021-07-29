@@ -52,8 +52,6 @@ public class stock {
                 
             }
             
-            
-            
         }
         
         //consider every point a buy point
@@ -135,7 +133,7 @@ public class stock {
 
     public static int buySellStock_fees(int[] arr, int fee){
 
-        int obuy=-arr[0];
+        int obuy= -arr[0];
         int osell=0;
 
         //here sell state is like our cash for buy state.
@@ -149,7 +147,9 @@ public class stock {
             if(obuy+arr[i]-fee>osell){
                 nsell=obuy+arr[i]-fee;
 
-            }else{
+            }
+
+            else{
                 nsell=osell;
             }
 
@@ -177,7 +177,7 @@ public class stock {
     public int bullSell_cooldown(int[] price){
 
         int osell=0;
-        int obuy=-price[0];
+        int obuy= -price[0];
         int ocdwn=0;
 
 
@@ -189,7 +189,8 @@ public class stock {
             //here cooldown state is like our cash for buy state.
 
             //buy state
-            if(ocdwn-price[i]>obuy){
+            if(ocdwn-price[i]>obuy)
+            {
                 nbuy=ocdwn-price[i];
             }else {
                 nbuy=obuy;

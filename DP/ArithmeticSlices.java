@@ -44,7 +44,8 @@ public class ArithmeticSlices {
 
 
 
-    public int numberOfArithmeticSlices2(int[] nums) {
+    public int numberOfArithmeticSlices2(int[] nums)
+    {
         
         HashMap<Integer, Integer> maps[]= new HashMap[nums.length];
         
@@ -85,9 +86,6 @@ public class ArithmeticSlices {
         return count;
         
      
-        
-        
-        
     }
     
 }

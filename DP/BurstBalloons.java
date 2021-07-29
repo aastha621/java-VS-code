@@ -9,7 +9,8 @@ public class BurstBalloons {
         
         int[][] dp= new int[n][n];
         
-        for(int g=0; g<n; g++){
+        for(int g=0; g<n; g++)
+        {
             for(int i=0, j=g; j<n && i<n; j++, i++){
                 
                 int max=Integer.MIN_VALUE;
