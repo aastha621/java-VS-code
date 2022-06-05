@@ -14,7 +14,8 @@ public class wiggleSort {
 
         for(int i=0; i<arr.length-1; i++)
         {
-            if(i%2==0){
+            if(i%2==0)
+            {
 
                 if(arr[i+1]<arr[i]){
                     swap(arr, i, i+1);

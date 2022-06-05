@@ -1,19 +1,14 @@
-package Array;
+package BinarySearch;
 
-public class allocatePages {
+public class AllocatePages{
 
-
-    //Function to find minimum number of pages.
-    public static int findPages(int[]a,int n,int m)
+     //Function to find minimum number of pages.
+     public static int findPages(int[]a,int n,int m)
     {
-        // [10, 20, 30, 40] in any case of distribution, the min value of max pages alloted to a student will be the max value of the array
-
-        //range of answer-> (max value, sum)
+        // [20, 10, 30, 40] in any case of distribution, the min pages alloted to a student will be the max value of the array
 
         int max=0;
         int sum=0;
-
-        if(m>a.length) return -1;
 
         for(int x: a){
             max=Math.max(max, x);
@@ -52,7 +47,8 @@ public class allocatePages {
         {
             sum+=p[i];
 
-            if(sum>max){
+            if(sum>max)
+            {
                 sum=p[i];
                 st++;
 
@@ -64,7 +60,16 @@ public class allocatePages {
 
 
     public static void main(String[] args) {
-        System.out.print("helloooooooooo");
+        String a = "amaankhan";
+        String s = a.substring(a.length() -2 ,a.length());
+        System.out.println(s);
+
+        if (s.equals("an")){
+            System.out.print("Amaan is a good boy");
+        }
+        else {
+            System.out.print("Amaan is excellent boy ");
+        }
     }
     
 }

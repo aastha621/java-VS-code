@@ -16,11 +16,11 @@ public class KMP {
         {
             int j=pi[i-1];
 
-            while(j>0 && s.charAt(j)!=s.charAt(i))
+            while(j>0 && s.charAt(j)!= s.charAt(i))
             j=pi[j-1];
 
 
-            if(s.charAt(i)==s.charAt(j))
+            if(s.charAt(i) == s.charAt(j))
             j++;
 
             pi[i]=j;
@@ -76,6 +76,7 @@ public class KMP {
             int ans= kmp("cde", "abcdefg");
 
             System.out.print(ans);
+
         }
 
 

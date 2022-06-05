@@ -51,6 +51,7 @@ public class preSuc {
                 pre=temp;
             }
         }
+        
 
 
         else if(root.val>key){
@@ -74,7 +75,7 @@ public class preSuc {
         if(root==null)return 0;
 
 
-        int currSum=root.val+maxSubtreeSum(root.left, sum)+maxSubtreeSum(root.right, sum);
+        int currSum= root.val+maxSubtreeSum(root.left, sum)+maxSubtreeSum(root.right, sum);
 
         sum=Math.max(sum, currSum);
 

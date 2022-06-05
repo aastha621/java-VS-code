@@ -25,7 +25,8 @@ public class RedundantBrackets {
                     st.pop();
                     
 
-                    if(flag==true)return true;
+                    if(flag==true)
+                    return true;
 
                 }
 

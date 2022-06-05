@@ -6,6 +6,104 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch AllocatePages",
+      "request": "launch",
+      "mainClass": "BinarySearch.AllocatePages",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch BinarySearch",
+      "request": "launch",
+      "mainClass": "Array.BinarySearch",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch allocatePages",
+      "request": "launch",
+      "mainClass": "Array.allocatePages",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch AllocatePages",
+      "request": "launch",
+      "mainClass": "AllocatePages",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch mainTest",
+      "request": "launch",
+      "mainClass": "Array.mainTest",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch subtractMatrix",
+      "request": "launch",
+      "mainClass": "Array.subtractMatrix",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch question2",
+      "request": "launch",
+      "mainClass": "Array.question2",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch reverse",
+      "request": "launch",
+      "mainClass": "Strings.reverse",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch Main",
+      "request": "launch",
+      "mainClass": "Stack.Main",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch manshi1",
+      "request": "launch",
+      "mainClass": "Array.manshi1",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch countInversions",
+      "request": "launch",
+      "mainClass": "Array.countInversions",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch lexoKsubseq",
+      "request": "launch",
+      "mainClass": "Stack.lexoKsubseq",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch ms",
+      "request": "launch",
+      "mainClass": "Graphs.Graphs.ms",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
+      "name": "Launch StackReverse",
+      "request": "launch",
+      "mainClass": "StackReverse",
+      "projectName": "Java Codes_1ebcd9c7"
+    },
+    {
+      "type": "java",
       "name": "Launch numPad",
       "request": "launch",
       "mainClass": "Recursion.numPad",
